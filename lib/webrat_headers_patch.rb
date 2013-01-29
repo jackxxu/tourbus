@@ -9,7 +9,7 @@ class Webrat::MechanizeAdapter
   #   end
   #
   def get_with_headers(url, data, headers = nil)
-    @response = mechanize.get({url: url, headers: headers}, data)
+    @response = mechanize.get(url, data, nil, headers)
   end
 
   alias_method :get_without_headers, :get
